@@ -384,6 +384,10 @@ table th {
   margin-right: 0.6rem;
 }
 
+.show_user {
+  color: #dc3545;
+}
+
 /* Animation (Add After) */
 .item-enter {
   opacity: 0;
