@@ -386,6 +386,8 @@ table th {
 
 .show_user {
   color: #dc3545;
+  font-weight: bold;
+  padding-left: 1px;
 }
 
 /* Animation (Add After) */
