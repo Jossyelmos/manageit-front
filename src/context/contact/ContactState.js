@@ -27,7 +27,7 @@ const ContactState = props => {
     // Get Contacts
     const getContacts = async () => {
         try {
-            const res = await axios.get('https://manageit-back.onrender.com/contacts');
+            const res = await axios.get('https://manageit-back.onrender.com/api/contacts');
 
             dispatch({
                 type: GET_CONTACTS,
@@ -49,7 +49,7 @@ const ContactState = props => {
         }
 
         try {
-            const res = await axios.post('https://manageit-back.onrender.com/contacts', contact, config);
+            const res = await axios.post('https://manageit-back.onrender.com/api/contacts', contact, config);
 
             dispatch({
                 type: ADD_CONTACT,
@@ -66,7 +66,7 @@ const ContactState = props => {
     // Delete Contact
     const deleteContact = async id => {
         try {
-            await axios.delete(`https://manageit-back.onrender.com/contacts/${id}`);
+            await axios.delete(`https://manageit-back.onrender.com/api/contacts/${id}`);
 
             dispatch({
                 type: DELETE_CONTACT,
@@ -102,7 +102,7 @@ const ContactState = props => {
             }
         }
         try {
-            const res = await axios.put(`https://manageit-back.onrender.com/contacts/${contact._id}`, contact, config);
+            const res = await axios.put(`https://manageit-back.onrender.com/api/contacts/${contact._id}`, contact, config);
             dispatch({
                 type: UPDATE_CONTACT,
                 payload: res.data

@@ -32,7 +32,7 @@ const AuthState = props => {
         }
 
         try {
-            const res = await axios.get('https://manageit-back.onrender.com/auth');
+            const res = await axios.get('https://manageit-back.onrender.com/api/auth');
 
             dispatch({
                 type: USER_LOADED,
@@ -52,7 +52,7 @@ const AuthState = props => {
         }
 
         try {
-            const res = await axios.post('https://manageit-back.onrender.com/users', FormData, config);
+            const res = await axios.post('https://manageit-back.onrender.com/api/users', FormData, config);
 
             dispatch({
                 type: REGISTER_SUCCESS,
@@ -77,7 +77,7 @@ const AuthState = props => {
         }
 
         try {
-            const res = await axios.post('https://manageit-back.onrender.com/auth', FormData, config);
+            const res = await axios.post('https://manageit-back.onrender.com/api/auth', FormData, config);
 
             dispatch({
                 type: LOGIN_SUCCESS,
